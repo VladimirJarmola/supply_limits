@@ -129,6 +129,7 @@ def start_app():
                 logging.error(
                     f'{datetime.datetime.now()} Всплыло окошко "ошибка сети" - schedule_delivery_button на цикле {warehouse["name"]}'
                 )
+                driver.refresh()
                 continue
 
             # получаем дни из календаря

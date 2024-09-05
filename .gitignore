@@ -2,7 +2,7 @@ __pycache__/
 export/
 User/
 venv/
-*.env
+.env
 *.png
 *.json
 *.pkl
