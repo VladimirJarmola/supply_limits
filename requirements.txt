@@ -1,0 +1,2 @@
+logging==0.4.9.6
+selenium==4.23.1

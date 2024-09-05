@@ -1,0 +1,8 @@
+__pycache__/
+export/
+User/
+venv/
+.env
+.png
+.json
+.pkl

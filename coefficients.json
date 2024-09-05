@@ -1,0 +1,1304 @@
+[
+    {
+        "date": "2024-09-02T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "Монопаллеты",
+        "boxTypeID": 5
+    },
+    {
+        "date": "2024-09-02T00:00:00Z",
+        "coefficient": 5,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "Короба",
+        "boxTypeID": 2
+    },
+    {
+        "date": "2024-09-02T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "Суперсейф",
+        "boxTypeID": 6
+    },
+    {
+        "date": "2024-09-03T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "Монопаллеты",
+        "boxTypeID": 5
+    },
+    {
+        "date": "2024-09-03T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "Короба",
+        "boxTypeID": 2
+    },
+    {
+        "date": "2024-09-03T00:00:00Z",
+        "coefficient": 5,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "Суперсейф",
+        "boxTypeID": 6
+    },
+    {
+        "date": "2024-09-04T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "Короба",
+        "boxTypeID": 2
+    },
+    {
+        "date": "2024-09-04T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "Монопаллеты",
+        "boxTypeID": 5
+    },
+    {
+        "date": "2024-09-04T00:00:00Z",
+        "coefficient": 5,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "Суперсейф",
+        "boxTypeID": 6
+    },
+    {
+        "date": "2024-09-05T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "Короба",
+        "boxTypeID": 2
+    },
+    {
+        "date": "2024-09-05T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "Монопаллеты",
+        "boxTypeID": 5
+    },
+    {
+        "date": "2024-09-05T00:00:00Z",
+        "coefficient": 5,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "Суперсейф",
+        "boxTypeID": 6
+    },
+    {
+        "date": "2024-09-06T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "Монопаллеты",
+        "boxTypeID": 5
+    },
+    {
+        "date": "2024-09-06T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "Короба",
+        "boxTypeID": 2
+    },
+    {
+        "date": "2024-09-06T00:00:00Z",
+        "coefficient": 5,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "Суперсейф",
+        "boxTypeID": 6
+    },
+    {
+        "date": "2024-09-07T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "Монопаллеты",
+        "boxTypeID": 5
+    },
+    {
+        "date": "2024-09-07T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "Короба",
+        "boxTypeID": 2
+    },
+    {
+        "date": "2024-09-07T00:00:00Z",
+        "coefficient": 1,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "Суперсейф",
+        "boxTypeID": 6
+    },
+    {
+        "date": "2024-09-08T00:00:00Z",
+        "coefficient": 1,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "Суперсейф",
+        "boxTypeID": 6
+    },
+    {
+        "date": "2024-09-08T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "Монопаллеты",
+        "boxTypeID": 5
+    },
+    {
+        "date": "2024-09-08T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "Короба",
+        "boxTypeID": 2
+    },
+    {
+        "date": "2024-09-09T00:00:00Z",
+        "coefficient": 1,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "Суперсейф",
+        "boxTypeID": 6
+    },
+    {
+        "date": "2024-09-09T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "Монопаллеты",
+        "boxTypeID": 5
+    },
+    {
+        "date": "2024-09-09T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "Короба",
+        "boxTypeID": 2
+    },
+    {
+        "date": "2024-09-10T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "Короба",
+        "boxTypeID": 2
+    },
+    {
+        "date": "2024-09-10T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "Монопаллеты",
+        "boxTypeID": 5
+    },
+    {
+        "date": "2024-09-10T00:00:00Z",
+        "coefficient": 1,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "Суперсейф",
+        "boxTypeID": 6
+    },
+    {
+        "date": "2024-09-11T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "Короба",
+        "boxTypeID": 2
+    },
+    {
+        "date": "2024-09-11T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "Монопаллеты",
+        "boxTypeID": 5
+    },
+    {
+        "date": "2024-09-11T00:00:00Z",
+        "coefficient": 1,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "Суперсейф",
+        "boxTypeID": 6
+    },
+    {
+        "date": "2024-09-12T00:00:00Z",
+        "coefficient": 1,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "Суперсейф",
+        "boxTypeID": 6
+    },
+    {
+        "date": "2024-09-12T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "Короба",
+        "boxTypeID": 2
+    },
+    {
+        "date": "2024-09-12T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "Монопаллеты",
+        "boxTypeID": 5
+    },
+    {
+        "date": "2024-09-13T00:00:00Z",
+        "coefficient": 1,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "Суперсейф",
+        "boxTypeID": 6
+    },
+    {
+        "date": "2024-09-13T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "Короба",
+        "boxTypeID": 2
+    },
+    {
+        "date": "2024-09-13T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "Монопаллеты",
+        "boxTypeID": 5
+    },
+    {
+        "date": "2024-09-14T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "Короба",
+        "boxTypeID": 2
+    },
+    {
+        "date": "2024-09-14T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "Монопаллеты",
+        "boxTypeID": 5
+    },
+    {
+        "date": "2024-09-14T00:00:00Z",
+        "coefficient": 1,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "Суперсейф",
+        "boxTypeID": 6
+    },
+    {
+        "date": "2024-09-15T00:00:00Z",
+        "coefficient": 1,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "Суперсейф",
+        "boxTypeID": 6
+    },
+    {
+        "date": "2024-09-15T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "Монопаллеты",
+        "boxTypeID": 5
+    },
+    {
+        "date": "2024-09-15T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "Короба",
+        "boxTypeID": 2
+    },
+    {
+        "date": "2024-09-02T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "QR-поставка с коробами"
+    },
+    {
+        "date": "2024-09-03T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "QR-поставка с коробами"
+    },
+    {
+        "date": "2024-09-04T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "QR-поставка с коробами"
+    },
+    {
+        "date": "2024-09-05T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "QR-поставка с коробами"
+    },
+    {
+        "date": "2024-09-06T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "QR-поставка с коробами"
+    },
+    {
+        "date": "2024-09-07T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "QR-поставка с коробами"
+    },
+    {
+        "date": "2024-09-08T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "QR-поставка с коробами"
+    },
+    {
+        "date": "2024-09-09T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "QR-поставка с коробами"
+    },
+    {
+        "date": "2024-09-10T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "QR-поставка с коробами"
+    },
+    {
+        "date": "2024-09-11T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "QR-поставка с коробами"
+    },
+    {
+        "date": "2024-09-12T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "QR-поставка с коробами"
+    },
+    {
+        "date": "2024-09-13T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "QR-поставка с коробами"
+    },
+    {
+        "date": "2024-09-14T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "QR-поставка с коробами"
+    },
+    {
+        "date": "2024-09-15T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 507,
+        "warehouseName": "Коледино",
+        "boxTypeName": "QR-поставка с коробами"
+    },
+    {
+        "date": "2024-09-02T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "Монопаллеты",
+        "boxTypeID": 5
+    },
+    {
+        "date": "2024-09-02T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "Короба",
+        "boxTypeID": 2
+    },
+    {
+        "date": "2024-09-02T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "Суперсейф",
+        "boxTypeID": 6
+    },
+    {
+        "date": "2024-09-03T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "Короба",
+        "boxTypeID": 2
+    },
+    {
+        "date": "2024-09-03T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "Монопаллеты",
+        "boxTypeID": 5
+    },
+    {
+        "date": "2024-09-03T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "Суперсейф",
+        "boxTypeID": 6
+    },
+    {
+        "date": "2024-09-04T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "Короба",
+        "boxTypeID": 2
+    },
+    {
+        "date": "2024-09-04T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "Монопаллеты",
+        "boxTypeID": 5
+    },
+    {
+        "date": "2024-09-04T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "Суперсейф",
+        "boxTypeID": 6
+    },
+    {
+        "date": "2024-09-05T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "Монопаллеты",
+        "boxTypeID": 5
+    },
+    {
+        "date": "2024-09-05T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "Короба",
+        "boxTypeID": 2
+    },
+    {
+        "date": "2024-09-05T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "Суперсейф",
+        "boxTypeID": 6
+    },
+    {
+        "date": "2024-09-06T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "Суперсейф",
+        "boxTypeID": 6
+    },
+    {
+        "date": "2024-09-06T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "Короба",
+        "boxTypeID": 2
+    },
+    {
+        "date": "2024-09-06T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "Монопаллеты",
+        "boxTypeID": 5
+    },
+    {
+        "date": "2024-09-07T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "Суперсейф",
+        "boxTypeID": 6
+    },
+    {
+        "date": "2024-09-07T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "Монопаллеты",
+        "boxTypeID": 5
+    },
+    {
+        "date": "2024-09-07T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "Короба",
+        "boxTypeID": 2
+    },
+    {
+        "date": "2024-09-08T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "Суперсейф",
+        "boxTypeID": 6
+    },
+    {
+        "date": "2024-09-08T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "Монопаллеты",
+        "boxTypeID": 5
+    },
+    {
+        "date": "2024-09-08T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "Короба",
+        "boxTypeID": 2
+    },
+    {
+        "date": "2024-09-09T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "Короба",
+        "boxTypeID": 2
+    },
+    {
+        "date": "2024-09-09T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "Монопаллеты",
+        "boxTypeID": 5
+    },
+    {
+        "date": "2024-09-09T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "Суперсейф",
+        "boxTypeID": 6
+    },
+    {
+        "date": "2024-09-10T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "Суперсейф",
+        "boxTypeID": 6
+    },
+    {
+        "date": "2024-09-10T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "Монопаллеты",
+        "boxTypeID": 5
+    },
+    {
+        "date": "2024-09-10T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "Короба",
+        "boxTypeID": 2
+    },
+    {
+        "date": "2024-09-11T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "Короба",
+        "boxTypeID": 2
+    },
+    {
+        "date": "2024-09-11T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "Монопаллеты",
+        "boxTypeID": 5
+    },
+    {
+        "date": "2024-09-11T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "Суперсейф",
+        "boxTypeID": 6
+    },
+    {
+        "date": "2024-09-12T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "Суперсейф",
+        "boxTypeID": 6
+    },
+    {
+        "date": "2024-09-12T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "Короба",
+        "boxTypeID": 2
+    },
+    {
+        "date": "2024-09-12T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "Монопаллеты",
+        "boxTypeID": 5
+    },
+    {
+        "date": "2024-09-13T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "Суперсейф",
+        "boxTypeID": 6
+    },
+    {
+        "date": "2024-09-13T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "Короба",
+        "boxTypeID": 2
+    },
+    {
+        "date": "2024-09-13T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "Монопаллеты",
+        "boxTypeID": 5
+    },
+    {
+        "date": "2024-09-14T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "Суперсейф",
+        "boxTypeID": 6
+    },
+    {
+        "date": "2024-09-14T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "Короба",
+        "boxTypeID": 2
+    },
+    {
+        "date": "2024-09-14T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "Монопаллеты",
+        "boxTypeID": 5
+    },
+    {
+        "date": "2024-09-15T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "Монопаллеты",
+        "boxTypeID": 5
+    },
+    {
+        "date": "2024-09-15T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "Суперсейф",
+        "boxTypeID": 6
+    },
+    {
+        "date": "2024-09-15T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "Короба",
+        "boxTypeID": 2
+    },
+    {
+        "date": "2024-09-02T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "QR-поставка с коробами"
+    },
+    {
+        "date": "2024-09-03T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "QR-поставка с коробами"
+    },
+    {
+        "date": "2024-09-04T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "QR-поставка с коробами"
+    },
+    {
+        "date": "2024-09-05T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "QR-поставка с коробами"
+    },
+    {
+        "date": "2024-09-06T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "QR-поставка с коробами"
+    },
+    {
+        "date": "2024-09-07T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "QR-поставка с коробами"
+    },
+    {
+        "date": "2024-09-08T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "QR-поставка с коробами"
+    },
+    {
+        "date": "2024-09-09T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "QR-поставка с коробами"
+    },
+    {
+        "date": "2024-09-10T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "QR-поставка с коробами"
+    },
+    {
+        "date": "2024-09-11T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "QR-поставка с коробами"
+    },
+    {
+        "date": "2024-09-12T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "QR-поставка с коробами"
+    },
+    {
+        "date": "2024-09-13T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "QR-поставка с коробами"
+    },
+    {
+        "date": "2024-09-14T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "QR-поставка с коробами"
+    },
+    {
+        "date": "2024-09-15T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 206348,
+        "warehouseName": "Тула",
+        "boxTypeName": "QR-поставка с коробами"
+    },
+    {
+        "date": "2024-09-02T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "Короба",
+        "boxTypeID": 2
+    },
+    {
+        "date": "2024-09-02T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "Монопаллеты",
+        "boxTypeID": 5
+    },
+    {
+        "date": "2024-09-02T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "Суперсейф",
+        "boxTypeID": 6
+    },
+    {
+        "date": "2024-09-03T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "Короба",
+        "boxTypeID": 2
+    },
+    {
+        "date": "2024-09-03T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "Монопаллеты",
+        "boxTypeID": 5
+    },
+    {
+        "date": "2024-09-03T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "Суперсейф",
+        "boxTypeID": 6
+    },
+    {
+        "date": "2024-09-04T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "Монопаллеты",
+        "boxTypeID": 5
+    },
+    {
+        "date": "2024-09-04T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "Короба",
+        "boxTypeID": 2
+    },
+    {
+        "date": "2024-09-04T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "Суперсейф",
+        "boxTypeID": 6
+    },
+    {
+        "date": "2024-09-05T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "Монопаллеты",
+        "boxTypeID": 5
+    },
+    {
+        "date": "2024-09-05T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "Короба",
+        "boxTypeID": 2
+    },
+    {
+        "date": "2024-09-05T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "Суперсейф",
+        "boxTypeID": 6
+    },
+    {
+        "date": "2024-09-06T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "Короба",
+        "boxTypeID": 2
+    },
+    {
+        "date": "2024-09-06T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "Монопаллеты",
+        "boxTypeID": 5
+    },
+    {
+        "date": "2024-09-06T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "Суперсейф",
+        "boxTypeID": 6
+    },
+    {
+        "date": "2024-09-07T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "Короба",
+        "boxTypeID": 2
+    },
+    {
+        "date": "2024-09-07T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "Монопаллеты",
+        "boxTypeID": 5
+    },
+    {
+        "date": "2024-09-07T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "Суперсейф",
+        "boxTypeID": 6
+    },
+    {
+        "date": "2024-09-08T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "Монопаллеты",
+        "boxTypeID": 5
+    },
+    {
+        "date": "2024-09-08T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "Короба",
+        "boxTypeID": 2
+    },
+    {
+        "date": "2024-09-08T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "Суперсейф",
+        "boxTypeID": 6
+    },
+    {
+        "date": "2024-09-09T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "Монопаллеты",
+        "boxTypeID": 5
+    },
+    {
+        "date": "2024-09-09T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "Короба",
+        "boxTypeID": 2
+    },
+    {
+        "date": "2024-09-09T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "Суперсейф",
+        "boxTypeID": 6
+    },
+    {
+        "date": "2024-09-10T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "Короба",
+        "boxTypeID": 2
+    },
+    {
+        "date": "2024-09-10T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "Монопаллеты",
+        "boxTypeID": 5
+    },
+    {
+        "date": "2024-09-10T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "Суперсейф",
+        "boxTypeID": 6
+    },
+    {
+        "date": "2024-09-11T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "Монопаллеты",
+        "boxTypeID": 5
+    },
+    {
+        "date": "2024-09-11T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "Короба",
+        "boxTypeID": 2
+    },
+    {
+        "date": "2024-09-11T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "Суперсейф",
+        "boxTypeID": 6
+    },
+    {
+        "date": "2024-09-12T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "Суперсейф",
+        "boxTypeID": 6
+    },
+    {
+        "date": "2024-09-12T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "Короба",
+        "boxTypeID": 2
+    },
+    {
+        "date": "2024-09-12T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "Монопаллеты",
+        "boxTypeID": 5
+    },
+    {
+        "date": "2024-09-13T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "Суперсейф",
+        "boxTypeID": 6
+    },
+    {
+        "date": "2024-09-13T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "Короба",
+        "boxTypeID": 2
+    },
+    {
+        "date": "2024-09-13T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "Монопаллеты",
+        "boxTypeID": 5
+    },
+    {
+        "date": "2024-09-14T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "Короба",
+        "boxTypeID": 2
+    },
+    {
+        "date": "2024-09-14T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "Монопаллеты",
+        "boxTypeID": 5
+    },
+    {
+        "date": "2024-09-14T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "Суперсейф",
+        "boxTypeID": 6
+    },
+    {
+        "date": "2024-09-15T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "Монопаллеты",
+        "boxTypeID": 5
+    },
+    {
+        "date": "2024-09-15T00:00:00Z",
+        "coefficient": 20,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "Короба",
+        "boxTypeID": 2
+    },
+    {
+        "date": "2024-09-15T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "Суперсейф",
+        "boxTypeID": 6
+    },
+    {
+        "date": "2024-09-02T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "QR-поставка с коробами"
+    },
+    {
+        "date": "2024-09-03T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "QR-поставка с коробами"
+    },
+    {
+        "date": "2024-09-04T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "QR-поставка с коробами"
+    },
+    {
+        "date": "2024-09-05T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "QR-поставка с коробами"
+    },
+    {
+        "date": "2024-09-06T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "QR-поставка с коробами"
+    },
+    {
+        "date": "2024-09-07T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "QR-поставка с коробами"
+    },
+    {
+        "date": "2024-09-08T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "QR-поставка с коробами"
+    },
+    {
+        "date": "2024-09-09T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "QR-поставка с коробами"
+    },
+    {
+        "date": "2024-09-10T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "QR-поставка с коробами"
+    },
+    {
+        "date": "2024-09-11T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "QR-поставка с коробами"
+    },
+    {
+        "date": "2024-09-12T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "QR-поставка с коробами"
+    },
+    {
+        "date": "2024-09-13T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "QR-поставка с коробами"
+    },
+    {
+        "date": "2024-09-14T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "QR-поставка с коробами"
+    },
+    {
+        "date": "2024-09-15T00:00:00Z",
+        "coefficient": -1,
+        "warehouseID": 120762,
+        "warehouseName": "Электросталь",
+        "boxTypeName": "QR-поставка с коробами"
+    }
+]
