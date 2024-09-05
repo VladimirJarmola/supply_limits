@@ -24,11 +24,11 @@ USER_WAREHOUSES_DATA = [
     },
     {
         "name": "Коледино", 
-        "order": "27859776"
+        "order": "27742994"
     },
     {
         "name": "Тула", 
-        "order": "27742994"
+        "order": "27944626"
     },
 ]
 
@@ -88,6 +88,7 @@ def start_app():
             "ноября",
             "декабря",
         ]
+
         year, month, day = date.split("-")
 
         if " ".join(list(day)).startswith("0"):
@@ -165,7 +166,7 @@ def start_app():
                 user_date_format = transform_user_date(USER_DATE)
 
                 if (
-                    day_date_format >= user_date_format
+                    int(day_date_format.split(" ")[0]) >= int(user_date_format.split(" ")[0])
                     and int(day_coefficient) in USER_COEFFICIENT
                 ):
                     # если условие выполняется наводим курсор и нажимаем выбрать
