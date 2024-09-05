@@ -22,10 +22,10 @@ USER_WAREHOUSES_DATA = [
         "name": "Электросталь", 
         "order": "27859852"
     },
-    {
-        "name": "Коледино", 
-        "order": "27742994"
-    },
+    # {
+    #     "name": "Коледино", 
+    #     "order": "27742994"
+    # },
     {
         "name": "Тула", 
         "order": "27944626"
@@ -110,6 +110,7 @@ def start_app():
                 print(
                     f'{datetime.datetime.now()} Перезагружаем вкладку {warehouse["name"]}'
                 )
+                counter = 0 
             # нажмем на кнопку "Запланировать поставку"
             try:
                 schedule_delivery_button = (
