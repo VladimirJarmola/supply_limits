@@ -70,7 +70,7 @@ def start_app():
         url = f'{BASE_URL}{SUPPLIES_URL}/supply-detail/uploaded-goods?preorderId={warehouse["order"]}&supplyId'
         driver.get(url)
         descriptor = driver.current_window_handle
-        warehouse.update({"descriptor": descriptor})
+        warehouse.update({"descriptor": descriptor, "life_time": 100})
         time.sleep(2)
 
     def transform_user_date(date: str):
@@ -97,20 +97,15 @@ def start_app():
         return f"{day} {months[int(month) - 1]}"
 
     success = False
-    counter = 0
 
     while not success:
-        print(f"{datetime.datetime.now()} Запускаем цикл {counter}")
-        counter += 1
+        print(f"{datetime.datetime.now()} Запускаем цикл {100 - warehouse['life_time']}")
+    
         for warehouse in USER_WAREHOUSES_DATA:
             # переключаемся на соответствующую вкладку
             driver.switch_to.window(warehouse["descriptor"])
-            if counter == 100:
-                driver.refresh()
-                print(
-                    f'{datetime.datetime.now()} Перезагружаем вкладку {warehouse["name"]}'
-                )
-                counter = 0 
+            warehouse["life_time"] -= 1
+            
             # нажмем на кнопку "Запланировать поставку"
             try:
                 schedule_delivery_button = (
@@ -126,6 +121,7 @@ def start_app():
                 logging.error(
                     f'{datetime.datetime.now()} Превышен таймаут schedule_delivery_button на цикле {warehouse["name"]}'
                 )
+                driver.refresh()
                 continue
             except ElementClickInterceptedException:
                 logging.error(
@@ -213,6 +209,12 @@ def start_app():
                 EC.presence_of_element_located(("xpath", "//body[1]"))
             ).send_keys(Keys.ESCAPE)
 
+            if warehouse["life_time"] == 0:
+                driver.refresh()
+                print(
+                    f'{datetime.datetime.now()} Перезагружаем вкладку {warehouse["name"]}'
+                )
+                warehouse["life_time"] = 100
     driver.close()
 
 
