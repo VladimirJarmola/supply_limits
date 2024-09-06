@@ -18,18 +18,12 @@ BASE_URL = "https://seller.wildberries.ru"
 SUPPLIES_URL = "/supplies-management/all-supplies"
 
 USER_WAREHOUSES_DATA = [
-    {
-        "name": "Электросталь", 
-        "order": "27859852"
-    },
+    {"name": "Электросталь", "order": "27859852"},
     # {
-    #     "name": "Коледино", 
+    #     "name": "Коледино",
     #     "order": "27742994"
     # },
-    {
-        "name": "Тула", 
-        "order": "27944626"
-    },
+    {"name": "Тула", "order": "27944626"},
 ]
 
 USER_WAREHOUSES_LIST = [warehouse["name"] for warehouse in USER_WAREHOUSES_DATA]
@@ -73,7 +67,7 @@ def start_app():
         warehouse.update({"descriptor": descriptor, "life_time": 100})
         time.sleep(2)
 
-    def transform_user_date(date: str):
+    def transform_date(date: str):
         months = [
             "января",
             "февраля",
@@ -89,23 +83,30 @@ def start_app():
             "декабря",
         ]
 
-        year, month, day = date.split("-")
-
-        if " ".join(list(day)).startswith("0"):
-            day = list(day)[-1]
-
-        return f"{day} {months[int(month) - 1]}"
+        if "-" in date:
+            year, month, day = date.split("-")
+            return {"day": int(day), "month": int(month), "year": int(year)}
+        else:
+            date_process = date.split(",")[0]
+            day, month_str = date_process.split(" ")
+            month_int = int(months.index(month_str) + 1)
+            current_month = int(datetime.datetime.now().month)
+            current_year = int(datetime.datetime.now().year)
+            year = current_year if month_int >= current_month else current_year + 1
+            return {"day": int(day), "month": int(month_int), "year": int(year)}
 
     success = False
 
     while not success:
-        print(f"{datetime.datetime.now()} Запускаем цикл {100 - warehouse['life_time']}")
-    
+        print(
+            f"{datetime.datetime.now()} Запускаем цикл {100 - warehouse['life_time']}"
+        )
+
         for warehouse in USER_WAREHOUSES_DATA:
             # переключаемся на соответствующую вкладку
             driver.switch_to.window(warehouse["descriptor"])
             warehouse["life_time"] -= 1
-            
+
             # нажмем на кнопку "Запланировать поставку"
             try:
                 schedule_delivery_button = (
@@ -154,18 +155,23 @@ def start_app():
                     day_coefficient = day.find_element(
                         "xpath", "./div[2]/div[1]/div[1]/div[1]/span/div[1]/span[2]"
                     ).text
-                    logging.info(f"{datetime.datetime.now()} {day_date} - {day_coefficient}")
+                    logging.info(
+                        f"{datetime.datetime.now()} {day_date} - {day_coefficient}"
+                    )
                 except NoSuchElementException:
-                    logging.info(f"{datetime.datetime.now()} поставка на {day_date} не активна")
+                    logging.info(
+                        f"{datetime.datetime.now()} поставка на {day_date} не активна"
+                    )
                     continue
 
-                day_date_format = day_date.split(",")[0]
-                user_date_format = transform_user_date(USER_DATE)
+                user_date_dict = transform_date(USER_DATE)
+                day_date_dict = transform_date(day_date)
 
                 if (
-                    int(day_date_format.split(" ")[0]) >= int(user_date_format.split(" ")[0])
-                    and int(day_coefficient) in USER_COEFFICIENT
-                ):
+                    day_date_dict["day"] >= user_date_dict["day"]
+                    or day_date_dict["month"] > user_date_dict["month"]
+                    or day_date_dict["year"] > user_date_dict["year"]
+                ) and int(day_coefficient) in USER_COEFFICIENT:
                     # если условие выполняется наводим курсор и нажимаем выбрать
                     actions.move_to_element(day)
                     actions.perform()
