@@ -19,11 +19,8 @@ SUPPLIES_URL = "/supplies-management/all-supplies"
 
 USER_WAREHOUSES_DATA = [
     {"name": "Электросталь", "order": "27859852"},
-    # {
-    #     "name": "Коледино",
-    #     "order": "27742994"
-    # },
-    {"name": "Тула", "order": "27944626"},
+    {"name": "Коледино", "order": "28332172"},
+    # {"name": "Тула", "order": "28288634"},
 ]
 
 USER_WAREHOUSES_LIST = [warehouse["name"] for warehouse in USER_WAREHOUSES_DATA]
@@ -35,7 +32,7 @@ USER_COEFFICIENT = [
     1,
 ]
 
-USER_DATE = "2024-09-11"
+USER_DATE = "2024-09-18"
 
 
 def start_app():
@@ -95,9 +92,7 @@ def start_app():
             year = current_year if month_int >= current_month else current_year + 1
             return {"day": int(day), "month": int(month_int), "year": int(year)}
 
-    success = False
-
-    while not success:
+    while USER_WAREHOUSES_DATA:
         print(
             f"{datetime.datetime.now()} Запускаем цикл {100 - warehouse['life_time']}"
         )
@@ -183,7 +178,7 @@ def start_app():
                     ).click()
 
                     driver.get_screenshot_as_file(
-                        f"{datetime.datetime.now()}_{warehouse['name']}_{day_coefficient}.png"
+                        f"{datetime.datetime.now().day}_{warehouse['name']}_{day_coefficient}.png"
                     )
                     # нажимаем на кнопку "Запланировать"
                     # driver.find_element('xpath', f'//div[@class="Modal__content__tdLj90YfdL"]//button[contains(@class, "button__I8dwnFm136")]//span[text()="Запланировать"]').click()
@@ -196,13 +191,16 @@ def start_app():
                         )
                     )
                     schedule_enter.click()
-                    success = True
+                    
                     print(
-                        f'{datetime.datetime.now()}: поставка на {warehouse["name"]} с {day_coefficient} запланирована!'
+                        f'{datetime.datetime.now()}: поставка на {warehouse["name"]} с {day_coefficient} запланирована на {day_date}!'
                     )
                     time.sleep(20)
 
-                    break
+                    driver.close()
+                    USER_WAREHOUSES_DATA.remove(warehouse)
+
+                    continue
 
             # будем нажимать крестик для закрытия модального окна button__ynLa9D20nV m__Mbjscl64eV onlyIcon__IUCeD-rFzH
             # exit_button_xpath = ('xpath', '//button[@class="button__ynLa9D20nV m__Mbjscl64eV onlyIcon__IUCeD-rFzH"]')
