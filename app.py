@@ -2,6 +2,7 @@ import datetime
 import logging
 import os
 import time
+import argparse
 from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support.ui import WebDriverWait
@@ -18,9 +19,10 @@ BASE_URL = "https://seller.wildberries.ru"
 SUPPLIES_URL = "/supplies-management/all-supplies"
 
 USER_WAREHOUSES_DATA = [
-    {"name": "Электросталь", "order": "27859852"},
-    {"name": "Коледино", "order": "28332172"},
-    # {"name": "Тула", "order": "28288634"},
+    {"name": "Электросталь", "order": "31332371"},
+    # {"name": "Коледино", "order": "29875722"},
+    {"name": "Тула", "order": "31395868"},
+    # {"name": "Краснодар", "order": "30454707"},
 ]
 
 USER_WAREHOUSES_LIST = [warehouse["name"] for warehouse in USER_WAREHOUSES_DATA]
@@ -30,12 +32,68 @@ USER_WAREHOUSES_LIST = [warehouse["name"] for warehouse in USER_WAREHOUSES_DATA]
 USER_COEFFICIENT = [
     0,
     1,
+    2,
+    3,
+    4,
+    5,
+    # 20,
 ]
 
-USER_DATE = "2024-09-18"
+USER_DATE = "2024-11-12"
 
 
-def start_app():
+def createParserCMD():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-s", "--single", action="store_true", default=False)
+    return parser
+
+
+def transform_date(date: str):
+    months = [
+        "января",
+        "февраля",
+        "марта",
+        "апреля",
+        "мая",
+        "июня",
+        "июля",
+        "августа",
+        "сентября",
+        "октября",
+        "ноября",
+        "декабря",
+    ]
+
+    if "-" in date:
+        year, month, day = date.split("-")
+        return {"day": int(day), "month": int(month), "year": int(year)}
+    else:
+        date_process = date.split(",")[0]
+        day, month_str = date_process.split(" ")
+        month_int = int(months.index(month_str) + 1)
+        current_month = int(datetime.datetime.now().month)
+        current_year = int(datetime.datetime.now().year)
+        year = current_year if month_int >= current_month else current_year + 1
+        return {"day": int(day), "month": int(month_int), "year": int(year)}
+
+
+def CMD_validate_single_date(flag: bool, day_date_dict: dict, user_date_dict: dict, day_coefficient: int):
+    if flag is False:
+        return (
+            (day_date_dict["day"] >= user_date_dict["day"] and day_date_dict["month"] == user_date_dict["month"])
+            or day_date_dict["month"] > user_date_dict["month"]
+            or day_date_dict["year"] > user_date_dict["year"]
+        ) and int(day_coefficient) in USER_COEFFICIENT
+    elif flag is True:
+        return day_date_dict["day"] == user_date_dict["day"] and int(day_coefficient) in USER_COEFFICIENT
+
+
+def start_app(single_date: bool):
+    if single_date:
+        print(f'Запускаем поиск поставки на конкретный день {USER_DATE}')
+    else:
+        print(f'Запускаем поиск поставки после указанной даты {USER_DATE}')
+    
     options = webdriver.ChromeOptions()
     options.add_argument(
         "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
@@ -48,6 +106,9 @@ def start_app():
     options.add_argument("--enable-profile-shortcut-manager")
     options.add_argument(f"user-data-dir={os.getcwd()}\\User")
     options.add_argument("--profile-directory=Vlad")
+
+    # options.binary_location = "C:\Program Files\Google\Chrome\Application\chrome.exe"
+
     # безголовый режим
     options.add_argument("--headless")
 
@@ -59,38 +120,15 @@ def start_app():
     for warehouse in USER_WAREHOUSES_DATA:
         driver.switch_to.new_window("tab")
         url = f'{BASE_URL}{SUPPLIES_URL}/supply-detail/uploaded-goods?preorderId={warehouse["order"]}&supplyId'
-        driver.get(url)
+
+        try:
+            driver.get(url)
+        except Exception as e:
+            logging.error(f'-- Неверно указан order -- Error: {e}')
+
         descriptor = driver.current_window_handle
         warehouse.update({"descriptor": descriptor, "life_time": 100})
         time.sleep(2)
-
-    def transform_date(date: str):
-        months = [
-            "января",
-            "февраля",
-            "марта",
-            "апреля",
-            "мая",
-            "июня",
-            "июля",
-            "августа",
-            "сентября",
-            "октября",
-            "ноября",
-            "декабря",
-        ]
-
-        if "-" in date:
-            year, month, day = date.split("-")
-            return {"day": int(day), "month": int(month), "year": int(year)}
-        else:
-            date_process = date.split(",")[0]
-            day, month_str = date_process.split(" ")
-            month_int = int(months.index(month_str) + 1)
-            current_month = int(datetime.datetime.now().month)
-            current_year = int(datetime.datetime.now().year)
-            year = current_year if month_int >= current_month else current_year + 1
-            return {"day": int(day), "month": int(month_int), "year": int(year)}
 
     while USER_WAREHOUSES_DATA:
         print(
@@ -161,12 +199,10 @@ def start_app():
 
                 user_date_dict = transform_date(USER_DATE)
                 day_date_dict = transform_date(day_date)
+                # print("This is return from validator")
+                # print(CMD_validate_single_date(single_date, day_date_dict, user_date_dict, day_coefficient))
 
-                if (
-                    day_date_dict["day"] >= user_date_dict["day"]
-                    or day_date_dict["month"] > user_date_dict["month"]
-                    or day_date_dict["year"] > user_date_dict["year"]
-                ) and int(day_coefficient) in USER_COEFFICIENT:
+                if CMD_validate_single_date(single_date, day_date_dict, user_date_dict, day_coefficient):
                     # если условие выполняется наводим курсор и нажимаем выбрать
                     actions.move_to_element(day)
                     actions.perform()
@@ -177,9 +213,6 @@ def start_app():
                         './/div[@class="Custom-popup"]//span[contains(text(), "Выбрать")]',
                     ).click()
 
-                    driver.get_screenshot_as_file(
-                        f"{datetime.datetime.now().day}_{warehouse['name']}_{day_coefficient}.png"
-                    )
                     # нажимаем на кнопку "Запланировать"
                     # driver.find_element('xpath', f'//div[@class="Modal__content__tdLj90YfdL"]//button[contains(@class, "button__I8dwnFm136")]//span[text()="Запланировать"]').click()
                     schedule_enter = WebDriverWait(driver, 10).until(
@@ -191,16 +224,18 @@ def start_app():
                         )
                     )
                     schedule_enter.click()
-                    
+                    time.sleep(3)
+                    driver.get_screenshot_as_file(
+                        f"{datetime.datetime.now().day}_{warehouse['name']}_{day_coefficient}.png"
+                    )
+
                     print(
                         f'{datetime.datetime.now()}: поставка на {warehouse["name"]} с {day_coefficient} запланирована на {day_date}!'
                     )
                     time.sleep(20)
 
-                    driver.close()
                     USER_WAREHOUSES_DATA.remove(warehouse)
-
-                    continue
+                    break
 
             # будем нажимать крестик для закрытия модального окна button__ynLa9D20nV m__Mbjscl64eV onlyIcon__IUCeD-rFzH
             # exit_button_xpath = ('xpath', '//button[@class="button__ynLa9D20nV m__Mbjscl64eV onlyIcon__IUCeD-rFzH"]')
@@ -213,7 +248,7 @@ def start_app():
                 EC.presence_of_element_located(("xpath", "//body[1]"))
             ).send_keys(Keys.ESCAPE)
 
-            if warehouse["life_time"] == 0:
+            if warehouse["life_time"] <= 0:
                 driver.refresh()
                 print(
                     f'{datetime.datetime.now()} Перезагружаем вкладку {warehouse["name"]}'
@@ -224,4 +259,8 @@ def start_app():
 
 if __name__ == "__main__":
     logging.basicConfig(level=30)
-    start_app()
+
+    parser = createParserCMD()
+    namespace = parser.parse_args()
+
+    start_app(namespace.single)

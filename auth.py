@@ -18,7 +18,6 @@ options.add_argument('--enable-profile-shortcut-manager')
 options.add_argument(f'user-data-dir={os.getcwd()}\\User')
 options.add_argument('--profile-directory=Vlad')
 
-
 driver = webdriver.Chrome(options=options)
 
 try:
