@@ -19,9 +19,9 @@ BASE_URL = "https://seller.wildberries.ru"
 SUPPLIES_URL = "/supplies-management/all-supplies"
 
 USER_WAREHOUSES_DATA = [
-    {"name": "Электросталь", "order": "31332371"},
+    {"name": "Электросталь", "order": "31604004"},
     # {"name": "Коледино", "order": "29875722"},
-    {"name": "Тула", "order": "31395868"},
+    {"name": "Тула", "order": "31900316"},
     # {"name": "Краснодар", "order": "30454707"},
 ]
 
@@ -39,7 +39,7 @@ USER_COEFFICIENT = [
     # 20,
 ]
 
-USER_DATE = "2024-11-12"
+USER_DATE = "2024-11-24"
 
 
 def createParserCMD():
