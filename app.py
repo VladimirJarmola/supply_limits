@@ -19,9 +19,11 @@ BASE_URL = "https://seller.wildberries.ru"
 SUPPLIES_URL = "/supplies-management/all-supplies"
 
 USER_WAREHOUSES_DATA = [
-    {"name": "Электросталь", "order": "31604004"},
+    {"name": "Электросталь", "order": "38521712"},
     # {"name": "Коледино", "order": "29875722"},
-    {"name": "Тула", "order": "31900316"},
+    {"name": "Тула", "order": "38443505"},
+    # {"name": "Казань_тест", "order": "38519855"},
+    # {"name": "Тест_астана2", "order": "38475160"},
     # {"name": "Краснодар", "order": "30454707"},
 ]
 
@@ -33,13 +35,13 @@ USER_COEFFICIENT = [
     0,
     1,
     2,
-    3,
-    4,
-    5,
+    # 3,
+    # 4,
+    # 5,
     # 20,
 ]
 
-USER_DATE = "2024-11-24"
+USER_DATE = "2025-05-26"
 
 
 def createParserCMD():
@@ -93,10 +95,10 @@ def start_app(single_date: bool):
         print(f'Запускаем поиск поставки на конкретный день {USER_DATE}')
     else:
         print(f'Запускаем поиск поставки после указанной даты {USER_DATE}')
-    
+
     options = webdriver.ChromeOptions()
     options.add_argument(
-        "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+        "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
     )
     # скроем ошибку, связанную с SSL
     options.add_argument("--ignore-certificate-errors-spki-list")
@@ -106,7 +108,10 @@ def start_app(single_date: bool):
     options.add_argument("--enable-profile-shortcut-manager")
     options.add_argument(f"user-data-dir={os.getcwd()}\\User")
     options.add_argument("--profile-directory=Vlad")
-
+    # отключения механизма, который позволяет веб-сайтам обнаруживать автоматизацию
+    options.add_argument("--disable-blink-features=AutomationControlled")
+    options.add_experimental_option("excludeSwitches", ["enable-automation"])  # Скрывает баннер 
+    options.add_argument("--disable-infobars")  # Отключает инфо-ленту
     # options.binary_location = "C:\Program Files\Google\Chrome\Application\chrome.exe"
 
     # безголовый режим
@@ -119,7 +124,7 @@ def start_app(single_date: bool):
 
     for warehouse in USER_WAREHOUSES_DATA:
         driver.switch_to.new_window("tab")
-        url = f'{BASE_URL}{SUPPLIES_URL}/supply-detail/uploaded-goods?preorderId={warehouse["order"]}&supplyId'
+        url = f'{BASE_URL}{SUPPLIES_URL}/supply-detail?preorderId={warehouse["order"]}&supplyId'
 
         try:
             driver.get(url)
@@ -163,6 +168,10 @@ def start_app(single_date: bool):
                 )
                 driver.refresh()
                 continue
+            except Exception as e:
+                logging.error(f'{datetime.datetime.now()} - schedule_delivery_button на цикле {warehouse["name"]} - ошибка {e}')
+                driver.refresh()
+                continue
 
             # получаем дни из календаря
             try:
@@ -186,15 +195,23 @@ def start_app(single_date: bool):
                         './div[@class="Calendar-cell__date-container__2TUSaIwaeG"]/span',
                     ).text
                     day_coefficient = day.find_element(
-                        "xpath", "./div[2]/div[1]/div[1]/div[1]/span/div[1]/span[2]"
+                        "xpath", "./div[2]/div[1]/div[1]/div[1]/span[1]/div[1]/span[2]", 
                     ).text
-                    logging.info(
-                        f"{datetime.datetime.now()} {day_date} - {day_coefficient}"
-                    )
-                except NoSuchElementException:
-                    logging.info(
-                        f"{datetime.datetime.now()} поставка на {day_date} не активна"
-                    )
+
+                    if day_coefficient.isnumeric():
+                        day_coefficient = int(day_coefficient)
+                    elif day_coefficient == "Бесплатно":
+                        day_coefficient = 0
+                    elif day_coefficient == "Пока недоступно":
+                        day_coefficient = 21
+
+                    # elif isinstance(day_coefficient, str):
+                    #     day_coefficient = 21
+
+                    logging.info(f"{datetime.datetime.now()} {day_date} - {day_coefficient}")
+
+                except Exception as e:
+                    logging.info(f"{datetime.datetime.now()} поставка на {day_date} ошибка {e}")
                     continue
 
                 user_date_dict = transform_date(USER_DATE)
@@ -206,6 +223,9 @@ def start_app(single_date: bool):
                     # если условие выполняется наводим курсор и нажимаем выбрать
                     actions.move_to_element(day)
                     actions.perform()
+                    # driver.get_screenshot_as_file(
+                    #     f"{datetime.datetime.now().day}_test.png"
+                    # )
 
                     # Нажимаем кнопку выбрать
                     day.parent.find_element(
@@ -219,20 +239,26 @@ def start_app(single_date: bool):
                         EC.presence_of_element_located(
                             (
                                 "xpath",
-                                f'//div[@class="Modal__content__tdLj90YfdL"]//button[contains(@class, "button__I8dwnFm136")]//span[text()="Запланировать"]',
+                                f'//div[@class="Modal__content__tdLj90YfdL"]//button[contains(@class, "button__I8dwnFm136")]//span[contains(text(), "Запланировать")]',
                             )
                         )
                     )
                     schedule_enter.click()
-                    time.sleep(3)
+                    # try:
+                    #     WebDriverWait(driver, 60).until(EC.url_to_be(f'{BASE_URL}{SUPPLIES_URL}'))
+                    # except Exception as e:
+                    #     logging.info(f'Произошла ошибка создания поставки на {warehouse["name"]} с {day_coefficient} запланирована на {day_date} или переход не состоялся: {e}')
+                    #     continue
+
                     driver.get_screenshot_as_file(
                         f"{datetime.datetime.now().day}_{warehouse['name']}_{day_coefficient}.png"
                     )
+                    time.sleep(10)
 
                     print(
                         f'{datetime.datetime.now()}: поставка на {warehouse["name"]} с {day_coefficient} запланирована на {day_date}!'
                     )
-                    time.sleep(20)
+                    # time.sleep(10)
 
                     USER_WAREHOUSES_DATA.remove(warehouse)
                     break
